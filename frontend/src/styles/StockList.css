@@ -1,0 +1,143 @@
+.stock-list {
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.stock-list-header {
+  margin-bottom: 1.5rem;
+}
+
+.stock-list-header h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  gap: 0.5rem;
+}
+
+.search-box svg {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.search-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.search-box input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.stock-list-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: calc(100vh - 250px);
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+/* Custom scrollbar */
+.stock-list-items::-webkit-scrollbar {
+  width: 6px;
+}
+
+.stock-list-items::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+.stock-list-items::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.stock-list-items::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.stock-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.stock-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(212, 165, 165, 0.3);
+  transform: translateX(5px);
+}
+
+.stock-item.active {
+  background: linear-gradient(135deg, rgba(212, 165, 165, 0.3), rgba(184, 142, 142, 0.3));
+  border-color: #d4a5a5;
+}
+
+.stock-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(212, 165, 165, 0.2);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d4a5a5;
+  flex-shrink: 0;
+}
+
+.stock-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.stock-symbol {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.stock-name {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.no-results {
+  text-align: center;
+  padding: 2rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 1024px) {
+  .stock-list {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+
+  .stock-list-items {
+    max-height: none;
+  }
+}
