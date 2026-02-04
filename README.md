@@ -470,7 +470,7 @@ This project is licensed for educational use. Commercial use requires appropriat
 ## Support
 
 For issues, questions, or contributions:
-- Review existing documentation in `stock-prediction-web/README.md` and `stock-backend/README.md`
+- Review existing documentation in `frontend/README.md` and `backend/README.md`
 - Check troubleshooting sections
 - Consult Massive API documentation at https://massive.com/docs
 - Review TensorFlow documentation for ML-related questions
